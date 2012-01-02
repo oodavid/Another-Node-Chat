@@ -2,9 +2,11 @@
  * Another node chat
  */
 
-// Require the http library
+// Required libraries
 var http	= require('http');
 var fs		= require('fs');
+
+/***************** Simple file server *****************/
 
 // Create the server
 var server = http.createServer(function (request, response) {
@@ -34,9 +36,9 @@ var server = http.createServer(function (request, response) {
 		});
 	}
 });
-// It listens on port 1337 and IP 127.0.0.1
+
+// Listen on port 1337 and IP 127.0.0.1
 server.listen(1337, "127.0.0.1");
-// For the joy
 console.log('Server running at http://127.0.0.1:1337/');
 
 /********************* MIME TABLE *********************/
@@ -48,5 +50,3 @@ var mimes = {
 	'html':	'text/html',
 	'ico':	'image/vnd.microsoft.icon'
 };
-
-

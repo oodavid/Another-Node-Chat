@@ -1,1 +1,9 @@
-h1 {color: #ABCDEF;}
+/* Generally */
+	h1		{}
+/* Conversation */
+	#convo	{width: 800px; border: 1px solid #000000; height: 400px; overflow-y: scroll;}
+/* Input */
+	input						{clear: both;	float: left; width: 680px; margin: 10px 10px 0 0;	padding: 5px; border: 1px solid #000000;}
+	button						{				float: left; width: 100px; margin: 10px 0 0 0;		height: 28px; border: 1px solid #000000;}
+	::-webkit-input-placeholder	{font-weight: bold; color: #666666;}
+	:-moz-placeholder			{font-weight: bold; color: #666666;}
