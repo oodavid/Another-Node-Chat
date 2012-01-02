@@ -1,7 +1,5 @@
 /**
- * Simple server example
- * 
- * All pages get the old hello world, stuff is logged for your convenience
+ * Another node chat
  */
 
 // Require the http library
@@ -48,6 +46,7 @@ var mimes = {
 	'js':	'text/javascript',
 	'htm':	'text/html',
 	'html':	'text/html',
+	'ico':	'image/vnd.microsoft.icon'
 };
 
 
