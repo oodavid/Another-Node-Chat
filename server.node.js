@@ -5,6 +5,7 @@
 // Required libraries
 var http	= require('http');
 var fs		= require('fs');
+var io		= require('socket.io');
 
 /***************** Simple file server *****************/
 
@@ -40,6 +41,19 @@ var server = http.createServer(function (request, response) {
 // Listen on port 1337 and IP 127.0.0.1
 server.listen(1337, "127.0.0.1");
 console.log('Server running at http://127.0.0.1:1337/');
+
+/***************** Simple Chat Server *****************/
+
+// Start listening to our server (note that we override io with the return of the listen method)
+io = io.listen(server);
+console.log('This is from the recipes of https://github.com/LearnBoost/socket.io < keep reading it!');
+// Add some events...
+io.sockets.on('connection', function (socket) {
+	socket.emit('news', { hello: 'world' });
+	socket.on('my other event', function (data) {
+		console.log(data);
+	});
+});
 
 /********************* MIME TABLE *********************/
 
